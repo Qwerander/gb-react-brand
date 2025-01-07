@@ -1,0 +1,57 @@
+@use './normalize' as *;
+@use './reset' as *;
+@use './global' as *;
+@use './fonts' as *;
+@use './colors' as *;
+
+
+html {
+    body {
+        margin: 0 auto;
+        font-family: 'Inter', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: var(--white);
+        transition: var(--transition);
+    }
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#root footer {
+    margin-top: auto;
+}
+
+.task {
+    position: relative;
+    padding: 20px;
+
+    &::after {
+        position: absolute;
+        bottom: 0;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: var(--black);
+    }
+}
+
+.active {
+    color: green !important;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+p,
+span,
+.MuiTypography-root {
+    color: var(--black);
+    transition: var(--transition);
+}
