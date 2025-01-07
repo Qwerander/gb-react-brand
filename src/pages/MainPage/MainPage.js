@@ -1,3 +1,13 @@
+import { Features } from "../../components/Features/Features";
+import { Intro } from "../../components/Intro/Intro";
+import { Offer } from "../../components/Offer/Offer";
+
 export const MainPage = () => {
-  return <div>MainPage</div>;
+  return (
+    <>
+      <Intro />
+      <Offer />
+      <Features />
+    </>
+  );
 };
