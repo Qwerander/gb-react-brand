@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import cls from "./products.module.scss";
 import cn from "classnames";
 import { ProductCard } from "../ProductCard/ProductCard";
+import { getRandomProducts } from "../../helpers/getRandomProducts";
 
 export const Products = ({ itemsToShow = 9, showTitle = true, choosenSizes = [] }) => {
   const allProducts = useSelector((state) => state.products.products);
@@ -12,7 +13,7 @@ export const Products = ({ itemsToShow = 9, showTitle = true, choosenSizes = [] 
     )
   : allProducts;
 
-  const products = filteredProducts.slice(0, itemsToShow);
+  const products = getRandomProducts(filteredProducts, itemsToShow);
 
 
   return (

@@ -4,8 +4,18 @@
     background-color: var(--bg);
 }
 
+.products__link {
+    overflow: hidden;
+    &:hover {
+        .products__img {
+            transform: scale(1.05);
+        }
+    }
+}
+
 .products__img {
     width: 100%;
+    transition: transform 0.3s ease-in-out;
 }
 
 .products__itemWrapper {
