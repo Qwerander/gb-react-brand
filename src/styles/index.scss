@@ -20,6 +20,7 @@ html {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 #root footer {
@@ -42,6 +43,11 @@ html {
 
 .active {
     color: green !important;
+}
+
+.breadcrumbs__itemActive {
+    font-weight: 700;
+    color: var(--red) !important;
 }
 
 

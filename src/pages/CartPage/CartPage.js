@@ -1,3 +1,9 @@
+import { Breadcrumbs } from "../../components/Breadcrumbs/Breadcrumbs";
+
 export const CartPage = () => {
-  return <div>CartPage</div>;
+  return (
+    <>
+      <Breadcrumbs />
+    </>
+  );
 };
