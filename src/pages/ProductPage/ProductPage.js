@@ -14,7 +14,7 @@ export const ProductPage = () => {
     <>
       <Breadcrumbs />
       <IntroProduct alt={product.alt} img={product.image} />
-      <Price id={id} price={product.price} />
+      <Price id={id} price={product.price} alt={product.alt} image={product.image} name={product.name} />
       <Products itemsToShow={3} showTitle={false} />
     </>
   );
