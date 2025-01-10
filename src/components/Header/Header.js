@@ -8,9 +8,11 @@ import { useState } from "react";
 import cls from "./header.module.scss";
 import cn from "classnames";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export const Header = () => {
   const [burgerOpen, toggleBurgerOpen] = useState(false);
+  const productsInCart = useSelector((state) => state.cart.productsInCart);
 
   return (
     <header className={cls.header}>
@@ -31,8 +33,9 @@ export const Header = () => {
           <button className={cls.header__btn}>
             <User />
           </button>
-          <NavLink className={cls.header__btn} to="/cart">
+          <NavLink className={cn(cls.header__btn, cls.header__cart)} to="/cart">
             <Cart />
+            {productsInCart.length ? <span className={cls.header__cartValue}>{productsInCart.length}</span> : null}
           </NavLink>
           {burgerOpen && <Menu />}
         </div>

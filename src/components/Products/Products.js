@@ -3,6 +3,7 @@ import cls from "./products.module.scss";
 import cn from "classnames";
 import { ProductCard } from "../ProductCard/ProductCard";
 import { getRandomProducts } from "../../helpers/getRandomProducts";
+import { Link } from "react-router-dom";
 
 export const Products = ({ itemsToShow = 9, showTitle = true, choosenSizes = [] }) => {
   const allProducts = useSelector((state) => state.products.products);
@@ -45,7 +46,7 @@ export const Products = ({ itemsToShow = 9, showTitle = true, choosenSizes = [] 
         </div>
         {showTitle && (
           <div className={cls.products__buttons}>
-            <button className={cls.products__btn}>Browse All Product</button>
+            <Link className={cls.products__btn} to={'/catalog'}>Browse All Product</Link>
           </div>
         )}
       </div>

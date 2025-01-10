@@ -108,3 +108,21 @@
         display: none;
     }
 }
+
+
+.header__cart {
+    position: relative;
+}
+.header__cartValue {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -6px;
+    right: -14px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 100%;
+}
